@@ -9,7 +9,7 @@ module Jekyll
     safe false
     priority :low
 
-    @@emacs_org_html_cmd = "(progn (require (quote org)) (setq org-html-head-include-default-style nil) (setq org-html-head-include-scripts nil) (condition-case nil (while t (insert (read-string \"\") \"\n\")) (error nil)) (set-buffer (org-export-to-buffer (quote html) \"*Org HTML Export*\" nil nil nil t nil (lambda nil t))) (send-string-to-terminal (buffer-string) nil))"
+    @@emacs_org_html_cmd = "(progn (require (quote org)) (setq font-lock-mode t) (setq org-html-head-include-default-style nil) (setq org-html-head-include-scripts nil) (condition-case nil (while t (insert (read-string \"\") \"\n\")) (error nil)) (set-buffer (org-export-to-buffer (quote html) \"*Org HTML Export*\" nil nil nil t nil (lambda nil t))) (send-string-to-terminal (buffer-string) nil))"
 
     def matches(ext)
       ext =~ /^\.org$/i

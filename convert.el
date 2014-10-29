@@ -1,5 +1,6 @@
 (progn
   (require 'org)
+  (setq font-lock-mode t)
   (setq org-html-head-include-default-style nil)
   (setq org-html-head-include-scripts       nil)
   (condition-case nil (while t (insert (read-string "") "\n")) (error nil))
